@@ -8,21 +8,25 @@
   <link rel="stylesheet" href="./estilos3.css">
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
 </head>
 <body>
   <h1>Women in tech</h1>
   <div id="app"></div>
-  <script>
+  <script type="text/babel">
     const $app = document.getElementById('app')
     const h = React.createElement;
 
     const Avatar = params => {
       const src = `https://randomuser.me/api/portraits/women/${params.id}.jpg`
 
-      return h('img', {src})
+      //return h('img', {src})
+      return <img src={src} />
     }
 
-    ReactDOM.render(h(Avatar, { id: 51 }), $app);
+    ReactDOM.render(
+      h("div", null, [h(Avatar, { id: 51 }), h(Avatar, { id: 52})]), $app);
 
 
     /*
