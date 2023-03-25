@@ -15,20 +15,23 @@
   <h1>Women in tech</h1>
   <div id="app"></div>
   <script type="text/babel">
-    const $app = document.getElementById('app')
+    const $app = document.getElementById('app');
     const h = React.createElement;
 
     const Avatar = params => {
-      const src = `https://randomuser.me/api/portraits/women/${params.id}.jpg`
+      const src = `https://randomuser.me/api/portraits/women/${params.id}.jpg`;
 
       //return h('img', {src})
       return <img src={src} />
     }
 
     ReactDOM.render(
-      h("div", null, [h(Avatar, { id: 51 }), h(Avatar, { id: 52})]), $app);
-
-
+      <div>
+        <Avatar id={1} />
+        <Avatar id={22} />
+      </div>,
+      $app
+    )
     /*
     const Avatar = params => {
       const src = `https://randomuser.me/api/portraits/women/${params.id}.jpg`
@@ -51,5 +54,6 @@
     })
     */
   </script>
+
 </body>
 </html>
