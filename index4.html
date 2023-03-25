@@ -21,15 +21,16 @@
 
     const Avatar = props => {
       const [enabled, setEnabled] = useState(true);
-      const src = `https://randomuser.me/api/portraits/women/${params.id}.jpg`;
+      const src = `https://randomuser.me/api/portraits/women/${props.id}.jpg`;
 
-      const className = enabled ? '' : 'disabled';
+      const pictureClassName = props.size === 'small' ? 'is-small' : '';
+      const imgClassName = enabled ? '' : 'disabled';
       //return h('img', {src})
       return(
-        <picture>
+        <picture className={pictureClassName}>
           <img 
             onClick={() => setEnabled(!enabled)}
-            className = {className} 
+            className = {imgClassName} 
             src={src} 
           />
           <strong>{props.name}</strong>
@@ -40,7 +41,7 @@
     ReactDOM.render(
       <div>
         <Avatar id={10} name='Stefanny' />
-        <Avatar id={19} name='Johanna' />
+        <Avatar id={19} name='Johanna' size='small' />
       </div>,
       $app
     )
