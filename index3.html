@@ -22,13 +22,22 @@
       const src = `https://randomuser.me/api/portraits/women/${params.id}.jpg`;
 
       //return h('img', {src})
-      return <img src={src} />
+      return(
+        <picture>
+          <img onClick={event => {
+              event.target.classList.toggle("disabled")
+            }} 
+            src={src} 
+          />
+          <strong>{params.name}</strong>
+        </picture>
+      );
     }
 
     ReactDOM.render(
       <div>
-        <Avatar id={1} />
-        <Avatar id={22} />
+        <Avatar id={10} name='Stefanny' />
+        <Avatar id={19} name='Johanna' />
       </div>,
       $app
     )
