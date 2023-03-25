@@ -11,3 +11,7 @@ img{
   border-radius: 50%;
   width: 100px;
 }
+
+img.disabled{
+  opacity: 0.3;
+}

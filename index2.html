@@ -17,7 +17,7 @@
       return `
         <picture>
           <img src='${src}'/>
-          <strong>${params.name}</strong>
+          <em>${params.name}</em>
         </picture>
       `
     }
@@ -26,6 +26,11 @@
     $app.innerHTML += Avatar({ id: 21, name: 'Andrea' })
     $app.innerHTML += Avatar({ id: 5, name: 'Stefania' })
 
+    $app.querySelectorAll('img').forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.toggle('disabled')
+      })
+    })
   </script>
 </body>
 </html>
