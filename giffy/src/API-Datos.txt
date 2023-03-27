@@ -1,0 +1,9 @@
+url
+https://developers.giphy.com/dashboard/
+
+name.
+rjimenezg73
+
+API Key
+AkyEIg6odRkA4UpX2ncyPTe8GgR6KB6m
+

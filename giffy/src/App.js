@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
+  const [gifs, setGifs] = useState(['https://media1.giphy.com/media/EPcvhM28ER9XW/giphy.gif?cid=ecf05e47iijq8c6dxkdr4j2o6xs9b9rdid092nv2zudm8hzi&rid=giphy.gif&ct=g']);
+  /* 
+  O puede ser:
+  const state = useState([]);
+  const value = state[0];
+  const updateValue = state[1];
+  */
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="App-content">
+        <h2>
+          <p>G i f s</p>
+          <img src={gifs} />
+        </h2>
+      </section>
     </div>
   );
 }
