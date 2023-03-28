@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
 const GIFS = [
@@ -22,6 +22,11 @@ function App() {
   const value = state[0];
   const updateValue = state[1];
   */
+
+  useEffect(function(){
+    setGifs(DIFFERENT_GIFS);
+    console.log('efecto ejecutado...');
+  }, []);
 
   return (
     <div className="App">
